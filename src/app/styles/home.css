@@ -302,6 +302,8 @@
 .result-actions,
 .replacement-form {
   display: grid;
+  /* 中身の最大幅で列が広がり、カードからはみ出さないようにする */
+  grid-template-columns: minmax(0, 1fr);
   gap: 14px;
   margin-top: 15px;
   text-align: left;
