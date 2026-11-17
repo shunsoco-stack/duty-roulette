@@ -1,0 +1,355 @@
+/* Today heading */
+.heading-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.heading-row .page-heading {
+  margin: 0;
+}
+.date-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-left: 20px;
+  border-left: 1px solid var(--line);
+  white-space: nowrap;
+}
+.date-chip span {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.date-chip strong {
+  font-size: 20px;
+}
+.date-chip small {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+/* Today assignments */
+.today-panel {
+  background: #fffefa;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 26px;
+}
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  margin: 0 10px 2px 0;
+}
+.duty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  gap: 15px;
+}
+.duty-card {
+  background: white;
+  border: 1px solid #e3e5db;
+  border-radius: 12px;
+  padding: 20px 17px 17px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.duty-card.decided {
+  border-color: #d5e3d7;
+}
+.duty-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 17px;
+}
+.duty-icon {
+  font-size: 26px;
+  background: #f3f2e9;
+  width: 47px;
+  height: 47px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 12px;
+  flex: 0 0 47px;
+}
+.duty-card h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+.duty-meta {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0;
+}
+.assigned {
+  flex: 1;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  padding: 18px 0;
+}
+.assigned strong {
+  font-size: 16px;
+}
+.undecided {
+  color: #8b9289;
+  font-size: 13px;
+  margin: 0;
+}
+.duty-card .button {
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 10px 12px;
+}
+.panel-bottom {
+  margin-top: 24px;
+  border-top: 1px dashed #d9dfd3;
+  padding-top: 19px;
+}
+.panel-bottom > span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.share-actions .button-row button,
+.share-actions .button {
+  font-size: 12px;
+}
+.action-message {
+  margin: 7px 0 0;
+  color: var(--green);
+  font-size: 12px;
+}
+.action-message:empty {
+  display: none;
+}
+/* Attendance notes and fairness */
+.home-bottom {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 24px;
+}
+.home-bottom .panel {
+  margin: 0;
+}
+.inline-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.inline-field input {
+  flex: 1;
+  max-width: 280px;
+  font-size: 12px;
+}
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.member-button {
+  padding: 12px 8px;
+  border-color: transparent;
+  justify-content: flex-start;
+  text-align: left;
+  background: #f8faf6;
+  gap: 9px;
+}
+.member-button strong {
+  font-size: 12px;
+}
+.member-button small {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.member-button.absent {
+  background: #f6eee4;
+  border-color: #e5cfb1;
+}
+.fairness-note {
+  background: #eaf0e4;
+  border: 1px solid #dfe6d7;
+  border-radius: 14px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.fairness-note .note-icon {
+  font-size: 27px;
+  display: block;
+  margin-bottom: 20px;
+}
+.fairness-note h2 {
+  font-size: 21px;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+.fairness-note > p:not(.eyebrow) {
+  color: #677b67;
+  font-size: 12px;
+  line-height: 2;
+  max-width: 290px;
+}
+.fairness-note a {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+}
+.mini-bars {
+  height: 90px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  margin-top: 14px;
+  padding: 0 25px;
+  border-bottom: 1px solid #c7d7bf;
+}
+.mini-bars i {
+  flex: 1;
+  border-radius: 5px 5px 0 0;
+  background: #b6c9aa;
+}
+.mini-bars i:nth-child(3n) {
+  background: #739b80;
+}
+/* Roulette */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 15px;
+}
+.spin-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.spin-panel {
+  text-align: center;
+}
+.wheel-wrap {
+  position: relative;
+  width: min(100%, 320px);
+  margin: 28px auto 10px;
+}
+.wheel-wrap svg {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 9px 10px #425d421b);
+}
+.wheel-pointer {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: calc(50% - 12px);
+  top: -2px;
+  border-top: 28px solid #263d3a;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  z-index: 1;
+}
+.wheel-caption {
+  font-size: 10px;
+  color: var(--muted);
+  margin: 18px 0 8px;
+}
+.spin-result {
+  padding: 20px 0;
+  min-height: 120px;
+}
+.spin-result p {
+  color: var(--muted);
+  font-size: 12px;
+}
+.spin-result h2 {
+  font-size: 21px;
+}
+.winner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 12px 0;
+  font-size: 30px;
+}
+.winner .avatar {
+  width: 45px;
+  height: 45px;
+  flex-basis: 45px;
+}
+.result-actions,
+.replacement-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 15px;
+  text-align: left;
+}
+.replacement-form {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.probability-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+.probability-list li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 0 21px;
+  border-bottom: 1px solid var(--line);
+}
+.probability-list strong {
+  font-size: 13px;
+}
+.probability-list .percentage {
+  font-size: 21px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.percentage small {
+  font-size: 11px;
+  margin-left: 3px;
+}
+.excluded {
+  opacity: 0.65;
+}
+.probability-bar {
+  position: absolute;
+  left: 44px;
+  right: 0;
+  bottom: 9px;
+  height: 3px;
+  background: #f1f4ee;
+  border-radius: 2px;
+}
+.probability-bar i {
+  display: block;
+  height: 3px;
+  border-radius: 2px;
+}
