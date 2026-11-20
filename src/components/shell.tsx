@@ -81,6 +81,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         </main>
         <footer>
           今日の当番ルーレット <span>データはこのブラウザに保存されます</span>
+          <span>・</span> <Link href="/privacy">プライバシーポリシー</Link>
         </footer>
       </div>
       <nav className="mobile-tabs" aria-label="モバイルナビゲーション">
